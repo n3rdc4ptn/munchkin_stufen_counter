@@ -39,4 +39,10 @@
       </div>
     {/each}
   </div>
+
+  <footer>
+    <a href="https://www.flaticon.com/free-icons/sword" title="sword icons"
+      >App Icon created by dDara - Flaticon</a
+    >
+  </footer>
 </main>
