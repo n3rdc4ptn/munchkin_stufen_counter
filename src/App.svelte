@@ -14,20 +14,23 @@
   };
 </script>
 
-<main>
-  <div class="flex gap-3 p-3">
-    <p class="px-4 py-2">SpielerIn hinzufügen:</p>
-    <input
-      placeholder="SpielerInname"
-      type="text"
-      bind:value={newPlayer.name}
-    />
-    <button on:click={addPlayer}>Add</button>
+<main class="p-2">
+  <div class="flex gap-1 mb-4">
+    <p class="px-2">SpielerIn hinzufügen:</p>
+
+    <form class="flex gap-1" on:submit|preventDefault={addPlayer}>
+      <input
+        placeholder="SpielerInname"
+        type="text"
+        bind:value={newPlayer.name}
+      />
+      <button>Add</button>
+    </form>
   </div>
 
-  <div class="grid grid-cols-4 gap-4 px-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-2">
     {#each $playerStore as player, idx}
-      <div class="flex flex-col items-center gap-3 border p-4">
+      <div class="flex flex-col items-center gap-3 border rounded p-4">
         <h1 class="text-center">{player.name}</h1>
         <Counter bind:count={player.count} />
         <button
@@ -40,7 +43,7 @@
     {/each}
   </div>
 
-  <footer>
+  <footer class="fixed bottom-1">
     <a href="https://www.flaticon.com/free-icons/sword" title="sword icons"
       >App Icon created by dDara - Flaticon</a
     >
