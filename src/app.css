@@ -33,7 +33,7 @@ button.text:hover {
 
 .bg-range[data-value="3"],
 .bg-range[data-value="4"] {
-  @apply bg-orange-400;
+  @apply bg-yellow-300;
 }
 
 .bg-range[data-value="5"],
