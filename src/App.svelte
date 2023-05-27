@@ -1,10 +1,11 @@
 <script lang="ts">
-  import Counter from "./lib/Counter.svelte";
-  import { playerStore, type Player } from "./lib/players";
+  import Player from "./lib/Player.svelte";
+  import { playerStore, type Player as PlayerType } from "./lib/players";
 
-  let newPlayer: Player = {
+  let newPlayer: PlayerType = {
     name: "",
-    count: 0,
+    count: 1,
+    avatarSvg: null,
   };
 
   const addPlayer = () => {
@@ -30,16 +31,7 @@
 
   <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-2">
     {#each $playerStore as player, idx}
-      <div class="flex flex-col items-center gap-3 border rounded p-4">
-        <h1 class="text-center">{player.name}</h1>
-        <Counter bind:count={player.count} />
-        <button
-          class="text"
-          on:click={() =>
-            ($playerStore = $playerStore.filter((x) => x != player))}
-          >remove</button
-        >
-      </div>
+      <Player bind:player />
     {/each}
   </div>
 

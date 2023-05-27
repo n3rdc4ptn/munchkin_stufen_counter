@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let count: number = 0;
+  export let count: number = 1;
   const increment = () => {
     if (count < 10) count += 1;
   };
   const decrement = () => {
-    if (count > 0) count -= 1;
+    if (count > 1) count -= 1;
   };
 </script>
 

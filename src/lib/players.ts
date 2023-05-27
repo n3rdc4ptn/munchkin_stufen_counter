@@ -3,6 +3,7 @@ import { writable, type Writable } from "svelte/store";
 export type Player = {
   name: string;
   count: number;
+  avatarSvg: string | null;
 };
 
 let playersLocalStorage = JSON.parse(localStorage.getItem("players"));
