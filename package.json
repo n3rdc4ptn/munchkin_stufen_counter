@@ -24,6 +24,10 @@
   },
   "dependencies": {
     "@dicebear/collection": "^6.0.4",
-    "@dicebear/core": "^6.0.4"
+    "@dicebear/core": "^6.0.4",
+    "@passageidentity/passage-elements": "^1.7.0",
+    "@passageidentity/passage-js": "^3.6.0",
+    "peerjs": "^1.4.7",
+    "uuid": "^9.0.0"
   }
 }

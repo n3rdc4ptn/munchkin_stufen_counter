@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Peer from "./lib/Peer.svelte";
   import Player from "./lib/Player.svelte";
   import { playerStore, type Player as PlayerType } from "./lib/players";
 
@@ -16,7 +17,10 @@
 </script>
 
 <main class="p-2">
-  <div class="flex gap-1 mb-4">
+  <div class="my-3">
+    <Peer />
+  </div>
+  <div class="flex gap-1 mb-4 items-center">
     <p class="px-2">SpielerIn hinzufügen:</p>
 
     <form class="flex gap-1" on:submit|preventDefault={addPlayer}>
