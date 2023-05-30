@@ -41,7 +41,7 @@
     >Connected to {connectToPeerID}. Only reading</span
   >
 {:else}
-  <div class="grid grid-cols-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
     <div class="flex items-center gap-2">
       Peer ID: <span class="font-mono bg-gray-100 p-1"
         >{$currentPeer ? $currentPeer.id : ""}</span
